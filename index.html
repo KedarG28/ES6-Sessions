@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+
+<input type="text" name="" id="inp1">
+<p id="err1"></p>
+<button onclick="fun8()">Click Me</button>
+
+
+
+
+
+
+    <script>
+        //hoisting
+        // x = 10;
+        // console.log(x);
+        // var x;
+
+
+        //This will not work, it works only on var 
+        // m=10;
+        // console.log(m)
+        // let m;
+
+        //closure----------------------------------------
+
+        // Nested Functions basically 
+
+        // function fun1(){
+        //     function fun2(){
+        //         return 'Hello'
+        //     }
+        //     return fun2;
+        // }
+        // // let a = fun1()();
+        // let a = fun1();
+        // let b = a();
+        // console.log(b);
+
+
+        // //------------------------Another example 
+
+        // function fun3(f){
+        //     return(g)=>{
+        //         return f+g
+        //     }
+        // }
+        // let ans = fun3(10)(10);
+        // console.log(ans)
+        //------------------------------------------------
+
+
+
+        //callable function & higher order function 
+
+        // fun4 ->higher order function 
+
+        //fun5 -> callable function 
+    //     function fun4(x,y,fun5){
+
+    //         let ans1 = x+y;
+    //         fun5(ans1)
+    //     }
+    //     fun4(10,20,fun7);
+    //     function fun7(res){
+    //         console.log(res)
+    //     }
+
+    //     // error handling // exception handling 
+    //     function fun8(){
+    //         let inp1 = document.querySelector('#inp1').value.trim();
+    //         let err1 = document.querySelector('#err1');
+    //     try{
+    //         if(inp1 =='') throw 'Blank Input';
+    //         if(isNaN(inp1)) throw 'Enter only Number';
+    //         let inp2 = Number(inp1);
+    //         if(inp2<6) throw 'num is too low';
+    //         if(inp2>10) throw 'num is too low';
+    //         else{
+    //             document.querySelector('#inp1').style.backgroundColor = 'green';
+    //             err1.innerHTML = '';
+    //         }
+
+    //     }
+    //     catch(err){
+
+    //         err1.innerHTML = 'error ='+err;
+
+    //     }
+    // }
+
+     let nums = [2,7,11,15];
+     let  target = 9;
+
+
+        function twoSum(nums, target) {
+            let arr1 = []
+            for(let i in nums){
+                for(let j = 0;j<nums.length;j++){
+                    if (nums[i]+nums[j] == target){
+                        arr1.push(i,j)
+                        console.log(i)
+                        console.log(j)
+                    }
+                }
+                
+            }
+            console.log(arr1)
+        }
+
+    twoSum(nums,target)
+    </script>
+</body>
+</html>
